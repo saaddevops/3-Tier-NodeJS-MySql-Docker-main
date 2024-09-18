@@ -3,7 +3,6 @@ FROM node:14-alpine
 
 # Set the working directory in the container for the client
 WORKDIR /usr/src/app/client
- 
 
 # Copy the client package.json and package-lock.json
 COPY client/package*.json ./
@@ -13,9 +12,6 @@ RUN npm install
 
 # Copy the client source code
 COPY client/ ./
-
-
-RUN chmod 777 webpack.config.js 
 
 # Build the client application
 RUN npm run build
