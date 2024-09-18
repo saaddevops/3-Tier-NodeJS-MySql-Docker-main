@@ -14,7 +14,7 @@ RUN npm install
 COPY client/ ./
 
 # Checking user
-RUN RUN ls -la
+RUN ls -la
 
 RUN whoami
 
