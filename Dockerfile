@@ -15,6 +15,7 @@ COPY client/ ./
 
 # Build the client application
 RUN npm run build
+RUN chmod 775 -R webpack.config.js 
 
 # Set the working directory in the container for the server
 WORKDIR /usr/src/app/server
