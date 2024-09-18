@@ -11,7 +11,7 @@ COPY client/package*.json ./
 RUN npm install
 
 # Copy the client source code
-COPY client/ ./
+COPY . /usr/src/app/client
 
 # Build the client application
 RUN npm run build
@@ -26,7 +26,7 @@ COPY server/package*.json ./
 RUN npm install
 
 # Copy the server source code
-COPY server/ ./
+COPY . /usr/src/app/server
 
 # Copy the client build files to the server's public directory
 RUN mkdir -p ./public && cp -R /usr/src/app/client/dist/* ./public/
