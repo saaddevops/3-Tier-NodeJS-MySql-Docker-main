@@ -13,6 +13,9 @@ RUN npm install
 # Copy the client source code
 COPY client/ ./
 
+# Checking user
+RUN whoami
+
 # Build the client application
 RUN npm run build
 
